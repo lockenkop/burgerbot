@@ -15,7 +15,7 @@ from telegram.ext import CommandHandler, Updater
 from telegram.ext.callbackcontext import CallbackContext
 from telegram.update import Update
 
-from parser import Parser, Slot, build_url
+from url_parser import Parser, Slot, build_url
 
 
 CHATS_FILE = "chats.json"
@@ -24,14 +24,15 @@ register_prefix = "https://service.berlin.de"
 
 service_map = {
     120335: "Abmeldung einer Wohnung",
-    120686: "Anmeldung",
-    120691: "Verpflichtungserklärung für einen kurzen Aufenthalt",
-    120701: "Personalausweis beantragen",
+    120686: "Anmeldung einer Wohnung",
+    326540: "Verpflichtungserklärung für einen kurzen Aufenthalt",
+    120703: "Personalausweis beantragen",
     120702: "Meldebescheinigung",
-    120703: "Reisepass beantragen",
+    121151: "Reisepass beantragen",
+    324573: "Reisepass abholen",
     120914: "Zulassung eines Fahrzeuges mit auswärtigem Kennzeichen mit Halterwechsel",
     121469: "Kinderreisepass beantragen / verlängern / aktualisieren",
-    121598: "Fahrerlaubnis Umschreibung einer ausländischen Fahrerlaubnis aus einem EU-/EWR-Staat",
+    121598: "Fahrerlaubnis - Umschreibung einer ausländischen Fahrerlaubnis aus einem EU-/EWR-Staat",
     121616: "Führerschein Kartenführerschein umtauschen",
     121627: "Fahrerlaubnis Ersterteilung beantragen",
     121701: "Beglaubigung von Kopien",
