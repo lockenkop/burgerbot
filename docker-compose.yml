@@ -3,6 +3,11 @@ version: '3.4'
 services:
   burgerbot:
     image: burgerbot
+    container_name: burgerbot
+    env_file:
+      - .env
+    volumes:
+      - '/home/serverderver/burgerbot/chats.json:/app/chats.json'
     build:
       context: .
       dockerfile: ./Dockerfile
