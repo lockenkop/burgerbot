@@ -218,7 +218,7 @@ class Bot:
             slots = self.parser.parse()
             for slot in slots:
                 self.__send_message(slot)
-            time.sleep(30)
+            time.sleep(120)
 
     def __send_message(self, slot: Slot) -> None:
         if self.__msg_in_cache(slot.msg):
